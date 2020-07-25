@@ -1,0 +1,13 @@
+
+#card{
+    width: fit-content;
+    text-align: center;
+    margin:10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 10px
+}
+img{
+    border-radius: 50%;
+    width:200px;
+}

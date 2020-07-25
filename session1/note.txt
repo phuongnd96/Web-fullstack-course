@@ -1,0 +1,23 @@
+let x={
+    "foo":bar
+};
+//Tạo ra 1 object y giống x nhưng ở một vùng nhớ khác trong RAM
+let y=Object.assign(x) 
+
+//Spread operator
+let x={
+    age:12
+};
+//tạo ra object y mới bằng cách copy object x (khác ô nhớ) sau đó thay đổi thuộc tính age=10;
+let y={...x,age:10} 
+
+//Destructuring
+const foo={
+    name:'foo',
+    age:10
+};
+//Phải viết đúng key name, age giống trong object foo
+ const {name,age}=foo;
+
+const coordinate =[0,0,0];
+const [x,y,z] =coordinate;
