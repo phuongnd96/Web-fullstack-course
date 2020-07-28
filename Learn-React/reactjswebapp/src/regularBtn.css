@@ -1,0 +1,13 @@
+.regular-btn{
+    width: 100px;
+    height: 100px;
+    font-weight: normal;
+    font-size: 35px;
+    color: #dbdbdb;
+    text-align: center;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
