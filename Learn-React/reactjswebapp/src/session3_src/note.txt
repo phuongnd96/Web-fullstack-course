@@ -1,0 +1,25 @@
+State=local variable trong component (lưu giữ trạng thái nội tại của component đó).
+Component chỉ có thể thay đổi state, không thay đổi được props
+//Sample Code
+import React, { useState } from "react";
+import "./styles.css";
+export default function App() {
+  // destructuring ES 6
+  // useState trả ra 1 mảng, gán giá trị của phần tử
+  // đầu tiên vào biến name
+  // useState trả ra 1 mảng, phần tử thứ nhất là giá trị được khởi tạo
+  // phần tử thứ 2 là 1 hàm dùng để thay đổi giá trị của phần
+  // tử được khởi tạo
+  Trong hàm setState phải tạo ra 1 object mới thay vì object cũ
+  Cú pháp Object assign tương tự với spread operator
+  let [name, setName] = useState("World");
+  const changeName = () => {
+    setName("Phương");
+  };
+  return (
+    <div className="App">
+      <div>Hello {name}!</div>
+      <button onClick={changeName}>Change name</button>
+    </div>
+  );
+}

@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {RatingBar} from './RatingBar.js';
 export const Card = (props) => {
+    const [toggle,changeToggle]=useState(false);
     let imgPath = props.imgPath;
     let label = props.label;
     let price = props.price;
     let discountPercentage = props.discountPercentage;
     let rating = props.rating;
     let comments = props.comments;
+    const handleClick=()=>{
+        changeToggle(!toggle)
+    }
     return (
-        <div className="card-container">
+        <div onClick={handleClick} className="card-container">
+            <div id="add-to-favorite">
+            <i style={{display:toggle?"":"none"}} class="fa fa-heart-o"></i>
+            </div>
             <div id="image">
                 <img src={imgPath} />
             </div>
